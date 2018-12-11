@@ -12,7 +12,7 @@ module.exports = {
         filename: 'static/js/[name].[contenthash].js',
         chunkFilename: 'static/js/[name].[contenthash].chunk.js',
         path: path.resolve(__dirname, './dist'),
-        library: 'card1',
+        library: 'card2',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },

@@ -1,7 +1,7 @@
 {
-  "name": "card1",
+  "name": "card2",
   "version": "1.0.0",
-  "description": "This component represents the first card model",
+  "description": "This component represents the second card model",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Lucas Nascimento",

@@ -8,13 +8,13 @@ module.exports = {
     mode: 'production',
     devtool: 'source-map',
     entry: {
-        card1: './src/index.jsx'
+        card2: './src/index.jsx'
     },
     output: {
         filename: 'js/[name].js',
         chunkFilename: 'js/[name].chunk.js',
         path: path.resolve(__dirname, './lib'),
-        library: 'card1',
+        library: 'card2',
         libraryTarget: 'umd',
     },
     module: {
