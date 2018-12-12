@@ -6,16 +6,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
-    devtool: 'source-map',
     entry: {
-        card2: './src/index.jsx'
+        card2: './src/index.tsx'
     },
     output: {
-        filename: 'js/[name].js',
-        chunkFilename: 'js/[name].chunk.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, './lib'),
-        library: 'card2',
-        libraryTarget: 'umd',
+        library: 'card2'
     },
     module: {
         rules: [
@@ -29,7 +26,7 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: require.resolve('file-loader'),
                 options: {
-                    name: 'media/[name].[ext]',
+                    name: '[name].[ext]',
                 }
             },
             {
@@ -48,8 +45,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['lib']),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
-            chunkFilename: 'css/[name].chunk.css',
+            filename: '[name].css',
         })
     ]
 }
