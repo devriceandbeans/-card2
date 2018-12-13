@@ -2,7 +2,7 @@
   "name": "card2",
   "version": "1.0.0",
   "description": "This component represents the second card model",
-  "main": "lib/index.js",
+  "main": "dist/card2.js",
   "author": "Lucas Nascimento",
   "license": "MIT",
   "dependencies": {
@@ -13,6 +13,7 @@
     "webpack-merge": "^4.1.4"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.0",
     "@babel/core": "^7.1.6",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
@@ -44,6 +45,6 @@
     "start": "webpack-dev-server --config webpack.dev.js --progress --watch --open",
     "build": "webpack --config webpack.prod.js --progress",
     "transpile": "webpack --config webpack.lib.js --progress",
-    "lib": "rm -rf dist && tsc -p ./ --copy-files"
+    "lib": "rm -rf dist && babel ./lib --out-dir dist --copy-files"
   }
 }
